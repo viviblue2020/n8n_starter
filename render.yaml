@@ -6,11 +6,12 @@ services:
     region: oregon
     dockerfilePath: ./Dockerfile
     healthCheckPath: /
+    startCommand: n8n start
     envVars:
       - key: N8N_HOST
         value: 0.0.0.0
       - key: N8N_PORT
-        value: $PORT   # Render reemplaza esto automáticamente
+        value: $PORT
       - key: N8N_PROTOCOL
         value: https
       - key: WEBHOOK_URL
