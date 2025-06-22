@@ -6,7 +6,6 @@ services:
     region: oregon
     dockerfilePath: ./Dockerfile
     healthCheckPath: /healthz
-    startCommand: n8n start --port $PORT
     envVars:
       - key: N8N_HOST
         value: 0.0.0.0
