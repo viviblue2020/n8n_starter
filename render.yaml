@@ -6,10 +6,10 @@ services:
     region: oregon
     dockerfilePath: ./Dockerfile
     healthCheckPath: /
-    startCommand: n8n start --port $PORT
+    startCommand: n8n start --tunnel
     envVars:
       - key: N8N_HOST
-        value: n8n-starter.onrender.com
+        value: 0.0.0.0
       - key: N8N_PORT
         value: 5678
       - key: PORT
